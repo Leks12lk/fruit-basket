@@ -4,3 +4,11 @@ D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\obj\Debug\FruitBas
 D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\obj\Debug\FruitBasket.Core.pdb
 D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\StructureMap.dll
 D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\StructureMap.xml
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\StructureMap.Web.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\WebActivatorEx.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\StructureMap.Web.pdb
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\StructureMap.Web.xml

@@ -55,3 +55,10 @@ D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Web\obj\Debug\FruitBask
 D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Web\obj\Debug\FruitBasket.Web.pdb
 D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Web\bin\StructureMap.dll
 D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Web\bin\StructureMap.xml
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Web\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Web\bin\StructureMap.Web.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Web\bin\WebActivatorEx.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Web\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Web\bin\Microsoft.Practices.ServiceLocation.xml
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Web\bin\StructureMap.Web.pdb
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Web\bin\StructureMap.Web.xml

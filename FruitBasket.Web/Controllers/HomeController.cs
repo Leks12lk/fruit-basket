@@ -5,15 +5,20 @@ using FruitBasket.Core.Interfaces;
 using FruitBasket.Core.Models;
 using FruitBasket.Core.Services;
 using FruitBasket.Core.ServicesInterfaces;
+using StructureMap;
 
 namespace FruitBasket.Web.Controllers
 {
 	public class HomeController : Controller
 	{
 		private readonly IGuessingService _guessingService;
-		public HomeController(IGuessingService guessingService)
+		private readonly IContainer _container;
+
+		public HomeController(IGuessingService guessingService
+			, IContainer container)
 		{
 			_guessingService = guessingService;
+			_container = container;
 		}
 		public ActionResult Index()
 		{
@@ -45,12 +50,16 @@ namespace FruitBasket.Web.Controllers
 
 		private List<Player> GeneratePlayers()
 		{
+			
 			var players = new List<Player>();
 			for (var i = 0; i < 5; i++)
 			{
+
 				var name = "Test " + i;
 				var type = i % 2 == 0 ? PlayerType.Random : PlayerType.Memory;
-				IGuessing guessing = i % 2 == 0 ? (IGuessing)new GuessingForRandomPlayer() : new GuessingForMemoryPlayer();
+				//IGuessing guessing = i % 2 == 0 ? (IGuessing)new GuessingForRandomPlayer() : new GuessingForMemoryPlayer();
+
+				var guessing = _container.GetInstance<IGuessing>(type.ToString());
 
 				var player = new Player(name, type, guessing);
 
