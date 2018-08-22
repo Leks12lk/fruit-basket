@@ -1,0 +1,6 @@
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\FruitBasket.Core.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\FruitBasket.Core.pdb
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\obj\Debug\FruitBasket.Core.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\obj\Debug\FruitBasket.Core.pdb
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\StructureMap.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Debug\StructureMap.xml
