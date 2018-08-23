@@ -1,0 +1,54 @@
+<div class="row">
+	<div class="col-sm-6">
+
+		<div *ngFor="let player of players">
+			<player-form [player]="player" 
+										(onDeletePlayer)="deletePlayer($event)" 
+										(onChangePlayer)="checkPlayersFields($event)">
+			</player-form>
+		</div>
+		<button type="button" class="btn btn-primary" (click)="addPlayer()" [disabled]="players.length >= maxPlayersCount">
+			Add Player
+		</button>
+		<button type="button" class="btn btn-success" (click)="startGame()" [disabled]="gameIsStarted || !isCorrectPlayersNumber || !playersValid">
+				Start Game
+		</button>
+
+		<h3 class="text-danger" *ngIf="showMessage">
+				Please fill all fields
+		</h3>
+
+	</div>
+	<div class="col-sm-6">
+		<img src="src/assets/images/basket1.jpg" class="img-fluid" alt="Responsive image" width="200">
+		<p class="lead" *ngIf="realBasketWeight">
+			Real basket weight is <span class="text-danger">{{ realBasketWeight }}</span>
+		</p>
+
+		<div class="card" *ngIf="guessResult">
+			<div class="card-body">
+
+				<div *ngIf="guessResult.isWinner">
+					<p class="lead">
+						The winner is the player: <span class="text-danger">{{ guessResult.playerName }} </span>
+					</p>
+					<p class="lead">
+						Total amount of attempts: <span class="text-danger">{{ guessResult.totalAttempts }} </span>
+						<p>
+				</div>
+
+				<div *ngIf="!guessResult.isWinner">
+					<p class="lead">
+						The closest guess has the player: <span class="text-danger">{{ guessResult.playerName }}</span>
+					</p>
+					<p class="lead">
+						His guess is: <span class="text-danger">{{ guessResult.closestGuessWeight }}</span>
+					</p>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>

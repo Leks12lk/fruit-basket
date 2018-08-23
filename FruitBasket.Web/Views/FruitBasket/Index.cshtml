@@ -1,0 +1,17 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<base href="@Url.Content("~/ClientApp/")"/>
+    <title>Index</title>
+</head>
+<body>
+	@Html.Action("GetHtmlPage", "FruitBasket", new { path = "~/ClientApp/dist/index.html" })
+</body>
+</html>

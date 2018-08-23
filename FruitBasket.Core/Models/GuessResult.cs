@@ -1,4 +1,5 @@
-﻿namespace FruitBasket.Core.Models
+﻿
+namespace FruitBasket.Core.Models
 {
 	public class GuessResult
 	{
@@ -7,6 +8,7 @@
 		public int Delta { get; set; }
 		public string PlayerName { get; set; }
 		public int ClosestGuessWeight { get; set; }
+		
 		public int RealBasketWeight { get; set; }
 	}
 }

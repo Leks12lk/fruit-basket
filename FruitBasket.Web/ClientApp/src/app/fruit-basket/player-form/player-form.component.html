@@ -1,0 +1,32 @@
+<div class="form-row align-items-center">
+	<div class="col-auto">
+		<label for="playerName">Name</label>
+		<input type="text" 
+							id="playerName" 
+							name="playerName" 
+							class="form-control mb-2" 
+							placeholder="Player Name" 
+							[(ngModel)]="player.name"
+							(keyup)="changePlayer()"
+							required>
+	</div>
+	<div class="col-auto">
+		<label for="playerType">Type</label>
+		<select name="playerType" 
+						id="playerType" 
+						class="form-control" 
+						[(ngModel)]="player.type">
+
+					<option value="Random" selected>Random</option>
+					<option value="Memory">Memory</option>
+					<option value="Thorough">Thorough</option>
+					<option value="Cheater">Cheater</option>
+					<option value="ThoroughCheater">Thorough Cheater</option>
+
+		</select>
+	</div>
+	<div class="col-auto pt30">
+		<button type="button" (click)="deletePlayer()" class="btn btn-warning btn-sm">Delete</button>
+	</div>
+
+</div>

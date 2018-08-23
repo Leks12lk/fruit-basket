@@ -4,6 +4,7 @@ namespace FruitBasket.Core.Models
 {
 	public class Player
 	{
+		// for different player types will be different implementation
 		private readonly IGuessing _guessing;
 
 		public Player(string name, PlayerType type, IGuessing guessing)

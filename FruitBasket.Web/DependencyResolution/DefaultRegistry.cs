@@ -21,10 +21,10 @@ using FruitBasket.Core.ServicesInterfaces;
 using FruitBasket.Core.Services;
 
 namespace FruitBasket.Web.DependencyResolution {
-	using StructureMap.Configuration.DSL;
-	using StructureMap.Graph;
 	using StructureMap;
 	using Core.Interfaces;
+	using Interfaces;
+	using Mappers;
 
 	public class DefaultRegistry : Registry {
         #region Constructors and Destructors
@@ -36,8 +36,8 @@ namespace FruitBasket.Web.DependencyResolution {
                     scan.WithDefaultConventions();
 					scan.With(new ControllerConvention());
                 });
-			// IncludeRegistry<SmWebRegistry>();
 			For<IGuessingService>().Use<GuessingService>();
+	        For<IViewModelsMapper>().Use<ViewModelsMapper>();
 	        For<IGuessing>().Use<GuessingForRandomPlayer>().Named(PlayerType.Random.ToString());
 	        For<IGuessing>().Use<GuessingForMemoryPlayer>().Named(PlayerType.Memory.ToString());
 	        For<IGuessing>().Use<GuessingForThoroughPlayer>().Named(PlayerType.Thorough.ToString());

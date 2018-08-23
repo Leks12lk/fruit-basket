@@ -8,44 +8,46 @@ namespace FruitBasket.Core.Services
 {
 	public class GuessingService : IGuessingService
 	{
-		public GuessResult GetWinnerName(List<Player> players, int realBasketWeight)
+		public GuessResult GetWinnerResult(List<Player> players, int realBasketWeight)
 		{
-			List<Thread> threads = new List<Thread>();
 			GuessResult winnerResult = new GuessResult();
 
-			foreach (var player in players)
-			{
-				Thread thread =
-					new Thread(() => { winnerResult = DoGuess(player, realBasketWeight); })
-					{
-						Name = $"Thread [{players.IndexOf(player)}]"
-					};
-				threads.Add(thread);
-			}
+			// create thread for each player in order to make guess in a concurrence way
+			List<Thread> threads = players.Select(player => new Thread(() => { winnerResult = DoGuess(player, realBasketWeight); })
+				{
+					Name = $"Thread [{players.IndexOf(player)}]"
+				})
+				.ToList();
 
+			// run just created threads
 			foreach (Thread t in threads)
 			{
 				t.Start();
 			}
 
+			// join running threads with the main thread
 			foreach (Thread t in threads)
 			{
 				t.Join();
 			}
 
+			// get the guess which was closest to the goal
 			var closestWeight = StoredGuess.GetClosestWeight();
-			if (!winnerResult.IsWinner)
-			{
-				winnerResult.PlayerName = closestWeight.FirstOrDefault().Key;
-				winnerResult.ClosestGuessWeight = closestWeight.FirstOrDefault().Value;
-			}
+
+			// if we have the winner - return winner result object
+			if (winnerResult.IsWinner) return winnerResult;
+
+			// if there is no winner - get neccessary info to display about the most closest guess
+			winnerResult.PlayerName = closestWeight.FirstOrDefault().Key;
+			winnerResult.ClosestGuessWeight = closestWeight.FirstOrDefault().Value;
 
 			return winnerResult;
 
 		}
-
+		
 		private static GuessResult DoGuess(Player player, int realBasketWeight)
 		{
+			// this method of a Player class is formed by Strategy pattern 
 			var winner = player.Guess(realBasketWeight);
 			return winner;
 		}

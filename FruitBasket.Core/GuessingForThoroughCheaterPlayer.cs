@@ -7,31 +7,6 @@ namespace FruitBasket.Core
 {
 	public class GuessingForThoroughCheaterPlayer : GuessingBase
 	{
-		//public bool Guess(int realBasketWeight)
-		//{
-		//	while (true)
-		//	{
-		//		Debug.WriteLine(Thread.CurrentThread.Name);
-
-		//		for (var i = 40; i <= 141; i++)
-		//		{
-		//			var guessWeight = i;
-
-		//			if (StoredGuess.Contains(guessWeight))
-		//			{
-		//				continue;
-		//			}
-
-		//			StoredGuess.AddGuessWeight(guessWeight);
-
-		//			if (guessWeight == realBasketWeight) return true;
-
-		//			var delayTime = Math.Abs(realBasketWeight - guessWeight);
-		//			Thread.Sleep(delayTime);
-		//		}
-		//	}
-		//}
-
 		public override int GetGuessingWeight(int attemptNumber, HashSet<int> triedGuesses)
 		{
 			Debug.WriteLine(Thread.CurrentThread.Name);

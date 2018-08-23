@@ -7,10 +7,9 @@ namespace FruitBasket.Core.Models
 	internal static class StoredGuess
 	{
 		private static readonly object Lock = new object();
-		private static readonly object AnotherLock = new object();
 
 		internal static HashSet<int> TriedGuessesWeight = new HashSet<int>();
-		internal static List<TestClass> PlayersGuesses = new List<TestClass>();
+		internal static List<GuessToStore> PlayersGuesses = new List<GuessToStore>();
 		internal static void AddGuessWeight(int guessWeight)
 		{
 			lock (Lock)
@@ -26,7 +25,7 @@ namespace FruitBasket.Core.Models
 		{
 			lock (Lock)
 			{
-				PlayersGuesses.Add(new TestClass
+				PlayersGuesses.Add(new GuessToStore
 				{
 					PlayerName = playerName,
 					GuessWeight = guessWeight,
@@ -38,7 +37,7 @@ namespace FruitBasket.Core.Models
 
 		internal static bool Contains(int guessWeight)
 		{
-			lock (AnotherLock)
+			lock (Lock)
 			{
 				return TriedGuessesWeight.Contains(guessWeight);
 			}
@@ -46,7 +45,7 @@ namespace FruitBasket.Core.Models
 
 		internal static Dictionary<string, int> GetClosestWeight()
 		{
-			lock (AnotherLock)
+			lock (Lock)
 			{
 				var result = new Dictionary<string, int>();
 				var min = PlayersGuesses.Min(x => x.Delta);
@@ -65,7 +64,7 @@ namespace FruitBasket.Core.Models
 	}
 
 
-	internal class TestClass
+	internal class GuessToStore
 	{
 		public string PlayerName { get; set; }
 		public int Delta { get; set; }

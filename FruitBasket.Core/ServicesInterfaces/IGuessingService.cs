@@ -9,6 +9,6 @@ namespace FruitBasket.Core.ServicesInterfaces
 {
 	public interface IGuessingService
 	{
-		GuessResult GetWinnerName(List<Player> players, int realBasketWeight);
+		GuessResult GetWinnerResult(List<Player> players, int realBasketWeight);
 	}
 }
