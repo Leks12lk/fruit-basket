@@ -1,0 +1,15 @@
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Release\FruitBasket.Core.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Release\FruitBasket.Core.pdb
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Release\StructureMap.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Release\StructureMap.Web.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Release\WebActivatorEx.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Release\Microsoft.Practices.ServiceLocation.pdb
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Release\Microsoft.Practices.ServiceLocation.xml
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Release\StructureMap.xml
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Release\StructureMap.Web.pdb
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\bin\Release\StructureMap.Web.xml
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\obj\Release\FruitBasket.Core.csprojResolveAssemblyReference.cache
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\obj\Release\FruitBasket.Core.dll
+D:\Aleksey\Aleksey\PersonalFiles\FruitBasket\FruitBasket.Core\obj\Release\FruitBasket.Core.pdb
